@@ -149,7 +149,7 @@ def test() -> ResponseSchemaModel[GetApiDetail]:
 @router.get('/test')
 def test() -> ResponseModel:
     res = CustomResponse(code=0, msg='成功')
-    return ResponseModel(res=res, data={'test': 'test'})
+    return response_base.success(res=res, data={'test': 'test'})
 ```
 
 ## 驼峰返回
